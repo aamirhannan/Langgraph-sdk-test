@@ -1,0 +1,16 @@
+# ENV (secrets)
+backend/.env
+
+# Node modules
+backend/node_modules/
+
+# Logs
+npm-debug.log*
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+.idea/

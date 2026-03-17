@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>AI Financial Intelligence System</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 700px;
+      margin: auto;
+      padding: 20px;
+      background: #f5f7fa;
+    }
+
+    h2 {
+      text-align: center;
+    }
+
+    #chat {
+      background: white;
+      border-radius: 10px;
+      padding: 15px;
+      height: 400px;
+      overflow-y: auto;
+      border: 1px solid #ddd;
+    }
+
+    .user {
+      color: green;
+      margin: 5px 0;
+    }
+
+    .ai {
+      color: blue;
+      margin: 5px 0;
+    }
+
+    .suggestion {
+      display: inline-block;
+      background: #e3e7ff;
+      padding: 6px 10px;
+      margin: 5px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 14px;
+    }
+
+    .suggestion:hover {
+      background: #cfd6ff;
+    }
+
+    #inputBox {
+      margin-top: 10px;
+      display: flex;
+    }
+
+    input {
+      flex: 1;
+      padding: 10px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+    }
+
+    button {
+      margin-left: 10px;
+      padding: 10px 15px;
+      border: none;
+      background: #4CAF50;
+      color: white;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #45a049;
+    }
+  </style>
+
+</head>
+
+<body>
+
+<h2>💰 AI Financial Intelligence System</h2>
+
+<div id="chat"></div>
+
+<!-- Suggestions -->
+<div id="suggestions">
+  <div class="suggestion" onclick="send('latest news')">Latest News</div>
+  <div class="suggestion" onclick="send('gold price')">Gold Price</div>
+  <div class="suggestion" onclick="send('25 * 10')">Calculate 25 × 10</div>
+  <div class="suggestion" onclick="send('summarize market impact')">Market Insight</div>
+</div>
+
+<!-- Input -->
+<div id="inputBox">
+  <input id="input" placeholder="Ask something..." />
+  <button onclick="send()">Send</button>
+</div>
+
+<script src="app.js"></script>
+
+</body>
+</html>
