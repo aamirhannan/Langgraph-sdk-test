@@ -6,8 +6,10 @@ const graph = require("./graph/graph");
 const app = express();
 app.use(express.json());
 
+
 // API
 app.post("/chat", async (req, res) => {
+  console.log("chat request received", req.body);
   const result = await graph.invoke({
     input: req.body.message
   });

@@ -2,7 +2,7 @@ require("dotenv").config();
 const { ChatOpenAI } = require("@langchain/openai");
 
 const llm = new ChatOpenAI({
-  model: "gpt-4o-mini",
+  modelName: "gpt-4o-mini",
   temperature: 0
 });
 
