@@ -1,0 +1,33 @@
+{
+  "name": "langgraph-telemetry-sdk",
+  "version": "1.0.0",
+  "description": "Telemetry SDK for tracing open inference apps",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsup src/index.ts --format cjs,esm --dts",
+    "dev": "tsup src/index.ts --format cjs,esm --dts --watch"
+  },
+  "dependencies": {
+    "@arizeai/openinference-instrumentation-anthropic": "^0.1.7",
+    "@arizeai/openinference-instrumentation-langchain": "^4.0.6",
+    "@arizeai/openinference-instrumentation-openai": "^4.0.5",
+    "@opentelemetry/api": "^1.9.0",
+    "@opentelemetry/core": "^2.6.1",
+    "@opentelemetry/instrumentation": "^0.213.0",
+    "@opentelemetry/instrumentation-http": "^0.213.0",
+    "@opentelemetry/instrumentation-undici": "^0.23.0",
+    "@opentelemetry/sdk-trace-base": "^2.6.0",
+    "@opentelemetry/sdk-trace-node": "^2.6.0"
+  },
+  "peerDependencies": {
+    "@anthropic-ai/sdk": "^0.80.0",
+    "@langchain/core": "^1.1.36",
+    "openai": "^6.32.0"
+  },
+  "devDependencies": {
+    "tsup": "^8.0.2",
+    "typescript": "^5.4.5"
+  }
+}
