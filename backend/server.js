@@ -1,4 +1,6 @@
 require("dotenv").config();
+const { initTelemetry } = require("./telemetry");
+initTelemetry();
 
 const express = require("express");
 const path = require("path");

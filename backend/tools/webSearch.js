@@ -3,6 +3,7 @@ require("dotenv").config();
 
 module.exports = async function webSearch(query) {
   try {
+    console.log("webSearch called with query:", query);
     const res = await axios.get("https://gnews.io/api/v4/search", {
       params: {
         q: query,

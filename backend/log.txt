@@ -1,0 +1,264 @@
+{
+  "_id": {
+    "$oid": "69cb9a51057a546ac4978ca9"
+  },
+  "traceID": "e64ce0d24820b390cff74ac3a9c9125c",
+  "span": [
+    {
+      "spanId": "9793c16394468c65",
+      "parentId": null,
+      "name": "POST",
+      "kind": 2,
+      "startTime": [
+        1774950987,
+        907000000
+      ],
+      "duration": [
+        4,
+        590568700
+      ],
+      "attributes": {
+        "http_request_method": "POST",
+        "http_request_method_original": "POST",
+        "url_full": "https://api.openai.com/v1/chat/completions",
+        "url_path": "/v1/chat/completions",
+        "url_query": "",
+        "url_scheme": "https",
+        "server_address": "api.openai.com",
+        "server_port": 443,
+        "user_agent_original": "langchainjs-openai/1.0.0 ((node/v20.18.0; win32; x64))",
+        "network_peer_address": "172.66.0.243",
+        "network_peer_port": 443,
+        "http_response_status_code": 200
+      }
+    },
+    {
+      "spanId": "84faf2b1176aad53",
+      "parentId": null,
+      "name": "OpenAI Chat Completions",
+      "kind": 0,
+      "startTime": [
+        1774950987,
+        727000000
+      ],
+      "duration": [
+        4,
+        797377900
+      ],
+      "attributes": {
+        "openinference_span_kind": "LLM",
+        "llm_model_name": "gpt-4o-mini-2024-07-18",
+        "input_value": "{\"model\":\"gpt-4o-mini\",\"temperature\":0,\"stream\":false,\"messages\":[{\"role\":\"user\",\"content\":\"Classify intent: news, finance, math, or general.\\nInput: latest news\"}]}",
+        "input_mime_type": "application/json",
+        "llm_invocation_parameters": "{\"model\":\"gpt-4o-mini\",\"temperature\":0,\"stream\":false}",
+        "llm_system": "openai",
+        "llm_provider": "openai",
+        "llm_input_messages_0_message_role": "user",
+        "llm_input_messages_0_message_content": "Classify intent: news, finance, math, or general.\nInput: latest news",
+        "output_value": "{\"id\":\"chatcmpl-DPQ7n0HtP1TnKvnqiRK2tSfoY2f7E\",\"object\":\"chat.completion\",\"created\":1774950995,\"model\":\"gpt-4o-mini-2024-07-18\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"Intent: news\",\"refusal\":null,\"annotations\":[]},\"logprobs\":null,\"finish_reason\":\"stop\"}],\"usage\":{\"prompt_tokens\":24,\"completion_tokens\":3,\"total_tokens\":27,\"prompt_tokens_details\":{\"cached_tokens\":0,\"audio_tokens\":0},\"completion_tokens_details\":{\"reasoning_tokens\":0,\"audio_tokens\":0,\"accepted_prediction_tokens\":0,\"rejected_prediction_tokens\":0}},\"service_tier\":\"default\",\"system_fingerprint\":\"fp_e738e3044b\"}",
+        "output_mime_type": "application/json",
+        "llm_output_messages_0_message_role": "assistant",
+        "llm_output_messages_0_message_content": "Intent: news",
+        "llm_token_count_completion": 3,
+        "llm_token_count_prompt": 24,
+        "llm_token_count_total": 27,
+        "llm_token_count_prompt_details_cache_read": 0,
+        "llm_token_count_prompt_details_audio": 0,
+        "llm_token_count_completion_details_audio": 0,
+        "llm_token_count_completion_details_reasoning": 0
+      }
+    },
+    {
+      "spanId": "e61705003a15f4eb",
+      "parentId": null,
+      "name": "ChatOpenAI",
+      "kind": 0,
+      "startTime": [
+        1774950987,
+        612000000
+      ],
+      "duration": [
+        4,
+        926131800
+      ],
+      "attributes": {
+        "openinference_span_kind": "LLM",
+        "input_value": "{\"messages\":[[{\"lc\":1,\"type\":\"constructor\",\"id\":[\"langchain_core\",\"messages\",\"HumanMessage\"],\"kwargs\":{\"content\":\"Classify intent: news, finance, math, or general.\\nInput: latest news\",\"additional_kwargs\":{},\"response_metadata\":{}}}]]}",
+        "input_mime_type": "application/json",
+        "output_value": "{\"generations\":[[{\"text\":\"Intent: news\",\"message\":{\"lc\":1,\"type\":\"constructor\",\"id\":[\"langchain_core\",\"messages\",\"AIMessage\"],\"kwargs\":{\"id\":\"chatcmpl-DPQ7n0HtP1TnKvnqiRK2tSfoY2f7E\",\"content\":\"Intent: news\",\"additional_kwargs\":{},\"response_metadata\":{\"tokenUsage\":{\"promptTokens\":24,\"completionTokens\":3,\"totalTokens\":27},\"finish_reason\":\"stop\",\"model_provider\":\"openai\",\"model_name\":\"gpt-4o-mini-2024-07-18\",\"usage\":{\"prompt_tokens\":24,\"completion_tokens\":3,\"total_tokens\":27,\"prompt_tokens_details\":{\"cached_tokens\":0,\"audio_tokens\":0},\"completion_tokens_details\":{\"reasoning_tokens\":0,\"audio_tokens\":0,\"accepted_prediction_tokens\":0,\"rejected_prediction_tokens\":0}},\"system_fingerprint\":\"fp_e738e3044b\"},\"type\":\"ai\",\"tool_calls\":[],\"invalid_tool_calls\":[],\"usage_metadata\":{\"output_tokens\":3,\"input_tokens\":24,\"total_tokens\":27,\"input_token_details\":{\"audio\":0,\"cache_read\":0},\"output_token_details\":{\"audio\":0,\"reasoning\":0}}}},\"generationInfo\":{\"finish_reason\":\"stop\"}}]],\"llmOutput\":{\"tokenUsage\":{\"promptTokens\":24,\"completionTokens\":3,\"totalTokens\":27}}}",
+        "output_mime_type": "application/json",
+        "llm_input_messages_0_message_role": "user",
+        "llm_input_messages_0_message_content": "Classify intent: news, finance, math, or general.\nInput: latest news",
+        "llm_output_messages_0_message_role": "assistant",
+        "llm_output_messages_0_message_content": "Intent: news",
+        "llm_invocation_parameters": "{\"model\":\"gpt-4o-mini\",\"temperature\":0,\"stream\":false}",
+        "llm_model_name": "gpt-4o-mini",
+        "llm_token_count_completion": 3,
+        "llm_token_count_prompt": 24,
+        "llm_token_count_total": 27,
+        "metadata": "{\"ls_provider\":\"openai\",\"ls_model_name\":\"gpt-4o-mini\",\"ls_model_type\":\"chat\",\"ls_temperature\":0,\"ls_integration\":\"langchain_chat_model\",\"model\":\"gpt-4o-mini\",\"temperature\":0,\"stream\":false,\"versions\":{\"@langchain/core\":\"1.1.36\",\"@langchain/openai\":\"1.3.1\"}}"
+      }
+    },
+    {
+      "spanId": "2d358e5d95658058",
+      "parentId": null,
+      "name": "GET",
+      "kind": 2,
+      "startTime": [
+        1774950992,
+        568000000
+      ],
+      "duration": [
+        1,
+        166961700
+      ],
+      "attributes": {
+        "http_url": "https://gnews.io/api/v4/search?q=latest+news&lang=en&max=3&apikey=66efa9e89a7de1f61a00a7f5cb7bb0ec",
+        "http_method": "GET",
+        "http_target": "/api/v4/search?q=latest+news&lang=en&max=3&apikey=66efa9e89a7de1f61a00a7f5cb7bb0ec",
+        "net_peer_name": "gnews.io",
+        "http_host": "gnews.io:443",
+        "net_peer_ip": "157.230.179.93",
+        "net_peer_port": 443,
+        "http_status_code": 200,
+        "http_status_text": "OK",
+        "http_flavor": "1.1",
+        "net_transport": "ip_tcp"
+      }
+    },
+    {
+      "spanId": "bf22327a8ef539dd",
+      "parentId": null,
+      "name": "POST",
+      "kind": 2,
+      "startTime": [
+        1774950993,
+        746000000
+      ],
+      "duration": [
+        6,
+        90136400
+      ],
+      "attributes": {
+        "http_request_method": "POST",
+        "http_request_method_original": "POST",
+        "url_full": "https://api.openai.com/v1/chat/completions",
+        "url_path": "/v1/chat/completions",
+        "url_query": "",
+        "url_scheme": "https",
+        "server_address": "api.openai.com",
+        "server_port": 443,
+        "user_agent_original": "langchainjs-openai/1.0.0 ((node/v20.18.0; win32; x64))",
+        "network_peer_address": "172.66.0.243",
+        "network_peer_port": 443,
+        "http_response_status_code": 200
+      }
+    },
+    {
+      "spanId": "1207f8465d2b6bee",
+      "parentId": null,
+      "name": "OpenAI Chat Completions",
+      "kind": 0,
+      "startTime": [
+        1774950993,
+        742000000
+      ],
+      "duration": [
+        6,
+        96151500
+      ],
+      "attributes": {
+        "openinference_span_kind": "LLM",
+        "llm_model_name": "gpt-4o-mini-2024-07-18",
+        "input_value": "{\"model\":\"gpt-4o-mini\",\"stream\":false,\"messages\":[{\"role\":\"user\",\"content\":\"Summarize and give market impact:\\nIs LeBron James playing tonight vs the Washington Wizards? Latest update on the Los Angeles Lakers star's injury report (March 30, 2026)\\nNBA News: The big question before this game is clear: will LeBron James play against the Wizards on March 31? Right now, all signs say yes. He is expected to be.\\nSource: Times of India\\n\\nIs Luka Doncic playing tonight vs the Washington Wizards? Latest update on the Los Angeles Lakers star's injury report (March 30, 2026)\\nNBA News: The Los Angeles Lakers play the Washington Wizards on Monday night at Crypto.com Arena. But one big name will not be on the court. Luka Doncic will mi.\\nSource: Times of India\\n\\n“Going to kill somebody”: Dave Portnoy demands action on Tiger Woods after DUI arrest, latest crash adds to troubling history\\nInternational Sports News: Tiger Woods is once again in the news, and this time it is not for golf. The 15-time major winner was arrested on Friday afternoon in Jupiter Island, .\\nSource: Times of India\"}]}",
+        "input_mime_type": "application/json",
+        "llm_invocation_parameters": "{\"model\":\"gpt-4o-mini\",\"stream\":false}",
+        "llm_system": "openai",
+        "llm_provider": "openai",
+        "llm_input_messages_0_message_role": "user",
+        "llm_input_messages_0_message_content": "Summarize and give market impact:\nIs LeBron James playing tonight vs the Washington Wizards? Latest update on the Los Angeles Lakers star's injury report (March 30, 2026)\nNBA News: The big question before this game is clear: will LeBron James play against the Wizards on March 31? Right now, all signs say yes. He is expected to be.\nSource: Times of India\n\nIs Luka Doncic playing tonight vs the Washington Wizards? Latest update on the Los Angeles Lakers star's injury report (March 30, 2026)\nNBA News: The Los Angeles Lakers play the Washington Wizards on Monday night at Crypto.com Arena. But one big name will not be on the court. Luka Doncic will mi.\nSource: Times of India\n\n“Going to kill somebody”: Dave Portnoy demands action on Tiger Woods after DUI arrest, latest crash adds to troubling history\nInternational Sports News: Tiger Woods is once again in the news, and this time it is not for golf. The 15-time major winner was arrested on Friday afternoon in Jupiter Island, .\nSource: Times of India",
+        "output_value": "{\"id\":\"chatcmpl-DPQ7q7LLxbEV8uv0MKuucl7hss3eA\",\"object\":\"chat.completion\",\"created\":1774950998,\"model\":\"gpt-4o-mini-2024-07-18\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"### Summary\\n\\nOn March 30, 2026, updates regarding major NBA players indicate that LeBron James is expected to play for the Los Angeles Lakers against the Washington Wizards on March 31. Conversely, Luka Doncic will not participate in the game due to unspecified reasons. In a separate news event, Dave Portnoy has publicly expressed outrage over Tiger Woods’ recent DUI arrest, highlighting Woods' troubled history with personal issues.\\n\\n### Market Impact\\n\\n1. **LeBron James Playing**: His presence on the court could positively impact the Lakers' performance and ticket sales for the game against the Wizards. LeBron's availability could lead to a higher betting line and increased interest from fans, potentially influencing the Lakers' stock if they are publicly traded or impacting merchandise sales.\\n\\n2. **Luka Doncic Missing**: Doncic’s absence may negatively affect the Mavericks' odds in upcoming games and could lead to decreased engagement from fans. It might impact betting markets if he is a key player for point spreads.\\n\\n3. **Tiger Woods' Arrest**: Portnoy's comments could stir media attention and public debate, potentially affecting Woods' endorsements and perceived brand value. Repeated incidents involving Woods might also decrease sponsorship attractiveness and impact overall brand partnerships in the sports industry.\\n\\nOverall, LeBron's expected participation is a positive for the Lakers, while Doncic's absence is a negative for the Mavericks, and Woods' legal troubles could harm his brand and related endorsements.\",\"refusal\":null,\"annotations\":[]},\"logprobs\":null,\"finish_reason\":\"stop\"}],\"usage\":{\"prompt_tokens\":233,\"completion_tokens\":294,\"total_tokens\":527,\"prompt_tokens_details\":{\"cached_tokens\":0,\"audio_tokens\":0},\"completion_tokens_details\":{\"reasoning_tokens\":0,\"audio_tokens\":0,\"accepted_prediction_tokens\":0,\"rejected_prediction_tokens\":0}},\"service_tier\":\"default\",\"system_fingerprint\":\"fp_005d610978\"}",
+        "output_mime_type": "application/json",
+        "llm_output_messages_0_message_role": "assistant",
+        "llm_output_messages_0_message_content": "### Summary\n\nOn March 30, 2026, updates regarding major NBA players indicate that LeBron James is expected to play for the Los Angeles Lakers against the Washington Wizards on March 31. Conversely, Luka Doncic will not participate in the game due to unspecified reasons. In a separate news event, Dave Portnoy has publicly expressed outrage over Tiger Woods’ recent DUI arrest, highlighting Woods' troubled history with personal issues.\n\n### Market Impact\n\n1. **LeBron James Playing**: His presence on the court could positively impact the Lakers' performance and ticket sales for the game against the Wizards. LeBron's availability could lead to a higher betting line and increased interest from fans, potentially influencing the Lakers' stock if they are publicly traded or impacting merchandise sales.\n\n2. **Luka Doncic Missing**: Doncic’s absence may negatively affect the Mavericks' odds in upcoming games and could lead to decreased engagement from fans. It might impact betting markets if he is a key player for point spreads.\n\n3. **Tiger Woods' Arrest**: Portnoy's comments could stir media attention and public debate, potentially affecting Woods' endorsements and perceived brand value. Repeated incidents involving Woods might also decrease sponsorship attractiveness and impact overall brand partnerships in the sports industry.\n\nOverall, LeBron's expected participation is a positive for the Lakers, while Doncic's absence is a negative for the Mavericks, and Woods' legal troubles could harm his brand and related endorsements.",
+        "llm_token_count_completion": 294,
+        "llm_token_count_prompt": 233,
+        "llm_token_count_total": 527,
+        "llm_token_count_prompt_details_cache_read": 0,
+        "llm_token_count_prompt_details_audio": 0,
+        "llm_token_count_completion_details_audio": 0,
+        "llm_token_count_completion_details_reasoning": 0
+      }
+    },
+    {
+      "spanId": "8936bc62b8615948",
+      "parentId": null,
+      "name": "ChatOpenAI",
+      "kind": 0,
+      "startTime": [
+        1774950993,
+        741000000
+      ],
+      "duration": [
+        6,
+        97890700
+      ],
+      "attributes": {
+        "openinference_span_kind": "LLM",
+        "input_value": "{\"messages\":[[{\"lc\":1,\"type\":\"constructor\",\"id\":[\"langchain_core\",\"messages\",\"HumanMessage\"],\"kwargs\":{\"content\":\"Summarize and give market impact:\\nIs LeBron James playing tonight vs the Washington Wizards? Latest update on the Los Angeles Lakers star's injury report (March 30, 2026)\\nNBA News: The big question before this game is clear: will LeBron James play against the Wizards on March 31? Right now, all signs say yes. He is expected to be.\\nSource: Times of India\\n\\nIs Luka Doncic playing tonight vs the Washington Wizards? Latest update on the Los Angeles Lakers star's injury report (March 30, 2026)\\nNBA News: The Los Angeles Lakers play the Washington Wizards on Monday night at Crypto.com Arena. But one big name will not be on the court. Luka Doncic will mi.\\nSource: Times of India\\n\\n“Going to kill somebody”: Dave Portnoy demands action on Tiger Woods after DUI arrest, latest crash adds to troubling history\\nInternational Sports News: Tiger Woods is once again in the news, and this time it is not for golf. The 15-time major winner was arrested on Friday afternoon in Jupiter Island, .\\nSource: Times of India\",\"additional_kwargs\":{},\"response_metadata\":{}}}]]}",
+        "input_mime_type": "application/json",
+        "output_value": "{\"generations\":[[{\"text\":\"### Summary\\n\\nOn March 30, 2026, updates regarding major NBA players indicate that LeBron James is expected to play for the Los Angeles Lakers against the Washington Wizards on March 31. Conversely, Luka Doncic will not participate in the game due to unspecified reasons. In a separate news event, Dave Portnoy has publicly expressed outrage over Tiger Woods’ recent DUI arrest, highlighting Woods' troubled history with personal issues.\\n\\n### Market Impact\\n\\n1. **LeBron James Playing**: His presence on the court could positively impact the Lakers' performance and ticket sales for the game against the Wizards. LeBron's availability could lead to a higher betting line and increased interest from fans, potentially influencing the Lakers' stock if they are publicly traded or impacting merchandise sales.\\n\\n2. **Luka Doncic Missing**: Doncic’s absence may negatively affect the Mavericks' odds in upcoming games and could lead to decreased engagement from fans. It might impact betting markets if he is a key player for point spreads.\\n\\n3. **Tiger Woods' Arrest**: Portnoy's comments could stir media attention and public debate, potentially affecting Woods' endorsements and perceived brand value. Repeated incidents involving Woods might also decrease sponsorship attractiveness and impact overall brand partnerships in the sports industry.\\n\\nOverall, LeBron's expected participation is a positive for the Lakers, while Doncic's absence is a negative for the Mavericks, and Woods' legal troubles could harm his brand and related endorsements.\",\"message\":{\"lc\":1,\"type\":\"constructor\",\"id\":[\"langchain_core\",\"messages\",\"AIMessage\"],\"kwargs\":{\"id\":\"chatcmpl-DPQ7q7LLxbEV8uv0MKuucl7hss3eA\",\"content\":\"### Summary\\n\\nOn March 30, 2026, updates regarding major NBA players indicate that LeBron James is expected to play for the Los Angeles Lakers against the Washington Wizards on March 31. Conversely, Luka Doncic will not participate in the game due to unspecified reasons. In a separate news event, Dave Portnoy has publicly expressed outrage over Tiger Woods’ recent DUI arrest, highlighting Woods' troubled history with personal issues.\\n\\n### Market Impact\\n\\n1. **LeBron James Playing**: His presence on the court could positively impact the Lakers' performance and ticket sales for the game against the Wizards. LeBron's availability could lead to a higher betting line and increased interest from fans, potentially influencing the Lakers' stock if they are publicly traded or impacting merchandise sales.\\n\\n2. **Luka Doncic Missing**: Doncic’s absence may negatively affect the Mavericks' odds in upcoming games and could lead to decreased engagement from fans. It might impact betting markets if he is a key player for point spreads.\\n\\n3. **Tiger Woods' Arrest**: Portnoy's comments could stir media attention and public debate, potentially affecting Woods' endorsements and perceived brand value. Repeated incidents involving Woods might also decrease sponsorship attractiveness and impact overall brand partnerships in the sports industry.\\n\\nOverall, LeBron's expected participation is a positive for the Lakers, while Doncic's absence is a negative for the Mavericks, and Woods' legal troubles could harm his brand and related endorsements.\",\"additional_kwargs\":{},\"response_metadata\":{\"tokenUsage\":{\"promptTokens\":233,\"completionTokens\":294,\"totalTokens\":527},\"finish_reason\":\"stop\",\"model_provider\":\"openai\",\"model_name\":\"gpt-4o-mini-2024-07-18\",\"usage\":{\"prompt_tokens\":233,\"completion_tokens\":294,\"total_tokens\":527,\"prompt_tokens_details\":{\"cached_tokens\":0,\"audio_tokens\":0},\"completion_tokens_details\":{\"reasoning_tokens\":0,\"audio_tokens\":0,\"accepted_prediction_tokens\":0,\"rejected_prediction_tokens\":0}},\"system_fingerprint\":\"fp_005d610978\"},\"type\":\"ai\",\"tool_calls\":[],\"invalid_tool_calls\":[],\"usage_metadata\":{\"output_tokens\":294,\"input_tokens\":233,\"total_tokens\":527,\"input_token_details\":{\"audio\":0,\"cache_read\":0},\"output_token_details\":{\"audio\":0,\"reasoning\":0}}}},\"generationInfo\":{\"finish_reason\":\"stop\"}}]],\"llmOutput\":{\"tokenUsage\":{\"promptTokens\":233,\"completionTokens\":294,\"totalTokens\":527}}}",
+        "output_mime_type": "application/json",
+        "llm_input_messages_0_message_role": "user",
+        "llm_input_messages_0_message_content": "Summarize and give market impact:\nIs LeBron James playing tonight vs the Washington Wizards? Latest update on the Los Angeles Lakers star's injury report (March 30, 2026)\nNBA News: The big question before this game is clear: will LeBron James play against the Wizards on March 31? Right now, all signs say yes. He is expected to be.\nSource: Times of India\n\nIs Luka Doncic playing tonight vs the Washington Wizards? Latest update on the Los Angeles Lakers star's injury report (March 30, 2026)\nNBA News: The Los Angeles Lakers play the Washington Wizards on Monday night at Crypto.com Arena. But one big name will not be on the court. Luka Doncic will mi.\nSource: Times of India\n\n“Going to kill somebody”: Dave Portnoy demands action on Tiger Woods after DUI arrest, latest crash adds to troubling history\nInternational Sports News: Tiger Woods is once again in the news, and this time it is not for golf. The 15-time major winner was arrested on Friday afternoon in Jupiter Island, .\nSource: Times of India",
+        "llm_output_messages_0_message_role": "assistant",
+        "llm_output_messages_0_message_content": "### Summary\n\nOn March 30, 2026, updates regarding major NBA players indicate that LeBron James is expected to play for the Los Angeles Lakers against the Washington Wizards on March 31. Conversely, Luka Doncic will not participate in the game due to unspecified reasons. In a separate news event, Dave Portnoy has publicly expressed outrage over Tiger Woods’ recent DUI arrest, highlighting Woods' troubled history with personal issues.\n\n### Market Impact\n\n1. **LeBron James Playing**: His presence on the court could positively impact the Lakers' performance and ticket sales for the game against the Wizards. LeBron's availability could lead to a higher betting line and increased interest from fans, potentially influencing the Lakers' stock if they are publicly traded or impacting merchandise sales.\n\n2. **Luka Doncic Missing**: Doncic’s absence may negatively affect the Mavericks' odds in upcoming games and could lead to decreased engagement from fans. It might impact betting markets if he is a key player for point spreads.\n\n3. **Tiger Woods' Arrest**: Portnoy's comments could stir media attention and public debate, potentially affecting Woods' endorsements and perceived brand value. Repeated incidents involving Woods might also decrease sponsorship attractiveness and impact overall brand partnerships in the sports industry.\n\nOverall, LeBron's expected participation is a positive for the Lakers, while Doncic's absence is a negative for the Mavericks, and Woods' legal troubles could harm his brand and related endorsements.",
+        "llm_invocation_parameters": "{\"model\":\"gpt-4o-mini\",\"stream\":false}",
+        "llm_model_name": "gpt-4o-mini",
+        "llm_token_count_completion": 294,
+        "llm_token_count_prompt": 233,
+        "llm_token_count_total": 527,
+        "metadata": "{\"ls_provider\":\"openai\",\"ls_model_name\":\"gpt-4o-mini\",\"ls_model_type\":\"chat\",\"ls_integration\":\"langchain_chat_model\",\"model\":\"gpt-4o-mini\",\"stream\":false,\"versions\":{\"@langchain/core\":\"1.1.36\",\"@langchain/openai\":\"1.3.1\"}}"
+      }
+    },
+    {
+      "spanId": "e900755366003e84",
+      "parentId": null,
+      "name": "POST",
+      "kind": 1,
+      "startTime": [
+        1774950987,
+        285000000
+      ],
+      "duration": [
+        12,
+        568750300
+      ],
+      "attributes": {
+        "http_url": "http://localhost:3000/chat",
+        "http_host": "localhost:3000",
+        "net_host_name": "localhost",
+        "http_method": "POST",
+        "http_scheme": "http",
+        "http_target": "/chat",
+        "http_user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36 Edg/146.0.0.0",
+        "http_request_content_length_uncompressed": 25,
+        "http_flavor": "1.1",
+        "net_transport": "ip_tcp",
+        "net_host_ip": "::1",
+        "net_host_port": 3000,
+        "net_peer_ip": "::1",
+        "net_peer_port": 54490,
+        "http_status_code": 200,
+        "http_status_text": "OK"
+      }
+    }
+  ],
+  "createdAt": {
+    "$date": "2026-03-31T09:56:33.505Z"
+  },
+  "updatedAt": {
+    "$date": "2026-03-31T09:56:40.429Z"
+  },
+  "__v": 2
+}
