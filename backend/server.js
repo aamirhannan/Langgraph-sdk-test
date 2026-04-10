@@ -1,5 +1,5 @@
-// require("./telemetry/instrumentation");
 require("dotenv").config();
+
 const express = require("express");
 const path = require("path");
 const graph = require("./graph/graph");
